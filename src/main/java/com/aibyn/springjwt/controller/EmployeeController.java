@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/test/")
+@RequestMapping("/api/test")
 public class EmployeeController {
 
     private final EmployeeService employeeService;
@@ -43,7 +43,7 @@ public class EmployeeController {
         return "Admin Content";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/employee/{id}")
     @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<Employee> getById(@PathVariable(value = "id") Long id){
         Employee employee = this.employeeService.getByIdThrowException(id);
@@ -56,14 +56,14 @@ public class EmployeeController {
         return this.employeeService.getAll();
     }
 
-    @PostMapping("/create")
+    @PostMapping("/employee/create")
     @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<HttpStatus> create(@Valid @RequestBody EmployeeDtoRequest employeeDtoRequest){
         this.employeeService.create(employeeDtoRequest);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/employee/update/{id}")
     @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
     public ResponseEntity<HttpStatus> update(@RequestBody EmployeeDtoRequest employeeDtoRequest,
                                              @PathVariable(name = "id") Long id){
@@ -71,7 +71,7 @@ public class EmployeeController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/employee/delete/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<HttpStatus> delete(@PathVariable(name = "id") Long id){
         this.employeeService.delete(id);
