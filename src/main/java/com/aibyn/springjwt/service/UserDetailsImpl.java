@@ -1,4 +1,4 @@
-package com.aibyn.springjwt.security.service;
+package com.aibyn.springjwt.service;
 
 import java.util.Collection;
 import java.util.List;

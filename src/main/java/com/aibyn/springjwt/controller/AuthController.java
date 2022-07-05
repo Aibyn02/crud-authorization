@@ -11,7 +11,7 @@ import com.aibyn.springjwt.model.User;
 import com.aibyn.springjwt.repository.RoleRepository;
 import com.aibyn.springjwt.repository.UserRepository;
 import com.aibyn.springjwt.security.jwt.JwtUtils;
-import com.aibyn.springjwt.security.service.UserDetailsImpl;
+import com.aibyn.springjwt.service.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

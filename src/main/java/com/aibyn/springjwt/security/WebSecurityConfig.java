@@ -2,7 +2,7 @@ package com.aibyn.springjwt.security;
 
 import com.aibyn.springjwt.security.jwt.AuthEntryPointJwt;
 import com.aibyn.springjwt.security.jwt.AuthTokenFilter;
-import com.aibyn.springjwt.security.service.UserDetailsServiceImpl;
+import com.aibyn.springjwt.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,8 +20,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(
-    // securedEnabled = true,
-    // jsr250Enabled = true,
     prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Autowired

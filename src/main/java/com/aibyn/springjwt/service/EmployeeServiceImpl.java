@@ -1,4 +1,4 @@
-package com.aibyn.springjwt.security.service;
+package com.aibyn.springjwt.service;
 
 import com.aibyn.springjwt.dto.request.EmployeeDtoRequest;
 import com.aibyn.springjwt.exception.CustomNotFoundException;

@@ -2,7 +2,7 @@ package com.aibyn.springjwt.controller;
 
 import com.aibyn.springjwt.dto.request.EmployeeDtoRequest;
 import com.aibyn.springjwt.model.Employee;
-import com.aibyn.springjwt.security.service.EmployeeService;
+import com.aibyn.springjwt.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
