@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 public class EmployeeDtoRequest {
 
-
     private Long id;
 
     private String firstname;

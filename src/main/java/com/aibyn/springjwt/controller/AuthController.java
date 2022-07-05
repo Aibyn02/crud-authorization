@@ -37,19 +37,17 @@ import com.aibyn.springjwt.payload.response.MessageResponse;
 @RequestMapping("/api/auth")
 public class AuthController {
   @Autowired
-  AuthenticationManager authenticationManager;
+  private AuthenticationManager authenticationManager;
+  @Autowired
+  private UserRepository userRepository;
+  @Autowired
+  private RoleRepository roleRepository;
 
   @Autowired
-  UserRepository userRepository;
+  private PasswordEncoder encoder;
 
   @Autowired
-  RoleRepository roleRepository;
-
-  @Autowired
-  PasswordEncoder encoder;
-
-  @Autowired
-  JwtUtils jwtUtils;
+  private JwtUtils jwtUtils;
 
   @PostMapping("/signin")
   public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {

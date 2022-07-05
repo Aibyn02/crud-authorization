@@ -77,6 +77,4 @@ public class EmployeeController {
         this.employeeService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
-
 }
